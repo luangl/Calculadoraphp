@@ -109,7 +109,7 @@ if (isset($_POST['clear_history'])) {
             <input type="number" name="num2" placeholder="Número 2" value="<?php echo isset($_POST['num2']) ? $_POST['num2'] : ''; ?>" required>
             </label>
             <button class="calcularbotao" type="submit" name="calculate">Calcular</button>
-        <div class="current-operation">
+        <div class="operacao-atual">
             <?php if (isset($operation)): ?>
                 <p style="
     justify-content: center;
