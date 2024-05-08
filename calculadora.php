@@ -78,4 +78,51 @@ if (isset($_POST['clear_history'])) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculadora PHP</h2>
+        <form action="" method="post">
+            
+        <label for="num2">Número 1
+            <input type="number" name="num1" placeholder="Número 1" value="<?php echo isset($_POST['num1']) ? $_POST['num1'] : ''; ?>" required> 
+            </label>
+            <select class="select" name="operator" required>
+    <option value="+" <?php echo isset($_POST['operator']) && $_POST['operator'] === '+' ? 'selected' : ''; ?>>+</option>
+    <option value="-" <?php echo isset($_POST['operator']) && $_POST['operator'] === '-' ? 'selected' : ''; ?>>-</option>
+    <option value="*" <?php echo isset($_POST['operator']) && $_POST['operator'] === '*' ? 'selected' : ''; ?>>*</option>
+    <option value="/" <?php echo isset($_POST['operator']) && $_POST['operator'] === '/' ? 'selected' : ''; ?>>/</option>
+    <option value="pow" <?php echo isset($_POST['operator']) && $_POST['operator'] === 'pow' ? 'selected' : ''; ?>>Potência (x^y)</option>
+    <option value="fact" <?php echo isset($_POST['operator']) && $_POST['operator'] === 'fact' ? 'selected' : ''; ?>>Fatoração (n!)</option>
+</select>
+
+        	
+            <label for="num2">Número 2
+            <input type="number" name="num2" placeholder="Número 2" value="<?php echo isset($_POST['num2']) ? $_POST['num2'] : ''; ?>" required>
+            </label>
+            <button class="calcularbotao" type="submit" name="calculate">Calcular</button>
+        <div class="current-operation">
+            <?php if (isset($operation)): ?>
+                <p style="
+    justify-content: center;
+    display: flex;" >Conta atual: <?php echo htmlspecialchars($operation); ?></p>
+            <?php endif; ?>
+        </div>
+        <div class="botoes"> 
+            <button class="memoriabotao" type="submit" name="memory">Memória (M)</button>
+            <button class="limparbotao" type="submit" name="clear_history">Limpar Histórico</button>
+        </div>
+        </form>
+
+</body>
+</html>
+
 
