@@ -79,3 +79,40 @@ ul li {
 .select {
     width: 10% !important;
 }
+
+.calcularbotao { 
+    width: 800px !important;
+    
+    border:  3px solid rgb(94, 237, 94) !important; 
+    background-color: green;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.calcularbotao:hover { 
+    background-color: rgb(80, 207, 80) !important;
+}
+
+.memoriabotao { 
+    
+    border:  3px solid rgba(1, 4, 169, 0.603) !important; 
+    background-color: rgb(56, 162, 228);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.limparbotao { 
+    
+    border:  3px solid rgb(97, 0, 0) !important; 
+    background-color: rgb(246, 55, 55);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.limparbotao:hover { 
+    background-color: rgb(243, 113, 113);
+}
+
+.numeros{
+    font-size: 10px;
+}
